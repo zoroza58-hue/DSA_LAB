@@ -1,17 +1,17 @@
-package pack
+package pack;
 
 public class MyLinkedList {
     class Node {
-        private int data;
-        private Node next;
+        protected int data;
+        protected Node next;
 
         Node(int d) {
             this.data = d;
             next = null;
         }
     }
-    private Node head = null;
-    private int size = 0;
+    protected Node head = null;
+    protected int size = 0;
 
     public int size() { return size; }
 
@@ -20,11 +20,16 @@ public class MyLinkedList {
         if (head == null) {
             head = p;
             size++;
+            return;
         }
 
         p.next = head;
         head = p;
         size++;
+    }
+
+    public void add(int [] data) {
+        for (int d : data) {add(d);} 
     }
 
     public void insert(int d) {
@@ -47,6 +52,10 @@ public class MyLinkedList {
         size++;
     }
 
+    public void insert(int [] data) {
+        for (int d : data) { insert(d); }
+    }
+
     public int find(int d) {
         Node p = head;
         int i = 0;
@@ -65,21 +74,22 @@ public class MyLinkedList {
         if (head == null) { return; }
 
         Node temp = new Node(0);
-        temp.next = haed;
+        temp.next = head;
         Node p = temp;
 
-        While (p.next != null && p.next.data != d) {
+        while (p.next != null && p.next.data != d) {
             p = p.next;
         }
         if (p.next != null) {
             p.next = p.next.next;
+            size--;
         }
 
         head = temp.next;
     }
 
     public void setAt(int index) {
-
+        
     }
 
     public void getAt(int index) {
