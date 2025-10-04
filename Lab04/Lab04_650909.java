@@ -32,33 +32,33 @@ public class Lab04_650909 {
         System.out.println("before -> " + lis);
         lis.q1_rotate_counter_clockwise(4);
         System.out.println("(k= " + 4 + ") -> " + lis);
-    //     lis.q1_rotate_clockwise(7);
-    //     System.out.println("(k= " + 7 + ") -> " + lis);
-    //     lis.q1_rotate_clockwise(1);
-    //     System.out.println("(k= " + 1 + ") -> " + lis); 
+        lis.q1_rotate_counter_clockwise(7);
+        System.out.println("(k= " + 7 + ") -> " + lis);
+        lis.q1_rotate_counter_clockwise(1);
+        System.out.println("(k= " + 1 + ") -> " + lis); 
     }
-    // static void q2() {
-    //     int [] d = {1,2,3,4,5,6,7,8};
-    //     MyTrickyLinkedList lis = new MyTrickyLinkedList();
-    //     lis.insert(d);
-    //     System.out.println("before -> " + lis);
-    //     lis.q2_reverse(); 
-    //     System.out.println( lis );       
-    // }
-    // static void q3() {
-    //     int [] d = {13,11,4,15,4};
-    //     MyTrickyLinkedList lis = new MyTrickyLinkedList();
-    //     lis.insert(d);
-    //     System.out.println("before -> " + lis);
-    //     lis.q3_remove_dup();
-    //     System.out.println("after-> " + lis);
-    //     int [] e = {13,11,15,4};
-    //     lis = new MyTrickyLinkedList();
-    //     lis.insert(e);
-    //     System.out.println("before -> " + lis);
-    //     lis.q3_remove_dup();
-    //     System.out.println("after-> " + lis);
-    // }
+    static void q2() {
+        int [] d = {1,2,3,4,5,6,7,8};
+        MyTricklyLinkedList lis = new MyTricklyLinkedList();
+        lis.insert(d);
+        System.out.println("before -> " + lis);
+        lis.q2_reverse(); 
+        System.out.println( lis );       
+    }
+    static void q3() {
+        int [] d = {13,11,4,15,4};
+        MyTricklyLinkedList lis = new MyTricklyLinkedList();
+        lis.insert(d);
+        System.out.println("before -> " + lis);
+        lis.q3_remove_dup();
+        System.out.println("after-> " + lis);
+        int [] e = {13,11,15,4};
+        lis = new MyTricklyLinkedList();
+        lis.insert(e);
+        System.out.println("before -> " + lis);
+        lis.q3_remove_dup();
+        System.out.println("after-> " + lis);
+    }
     // static void q4() {
     //     int [] d = {1,9,9,9};
     //     MyTrickyLinkedList lis = new MyTrickyLinkedList();
@@ -98,10 +98,10 @@ public class Lab04_650909 {
         // demo_2(); 
         System.out.println("calling q1");
         q1();
-        // System.out.println("calling q2");
-        // q2();
-        // System.out.println("calling q3");
-        // q3();
+        System.out.println("calling q2");
+        q2();
+        System.out.println("calling q3");
+        q3();
         // System.out.println("calling q4");
         // q4();        
         // System.out.println("calling q5");
