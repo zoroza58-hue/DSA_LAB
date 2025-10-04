@@ -2,21 +2,24 @@ package pack;
 
 public class MyTricklyLinkedList extends MyLinkedList {
     public void q1_rotate_counter_clockwise(int k) {
-        if (head == null || size <= 1 || k == 0) return;
-
-        int size = size();
-        k %= size;
-        Node tail = head;
-        while (tail.next != null) { tail = tail.next; }
-        tail.next = head;
-
-        Node cutNode = head;
-        for (int i = 1; i < k; i++) {
-            cutNode = cutNode.next;
+        if (head == null || size <= 1) {
+            return;
         }
-        cutNode.next = null;
 
-        head = tail;
+        Node tailNode = head;
+        while (tailNode.next != null) {
+            tailNode = tailNode.next;
+        }
+        // tailNode.next = head;
+
+        Node cutKNode = head;
+        for (int i = 1; i < k; i++) {
+            cutKNode = cutKNode.next;
+        }
+        cutKNode.next = null;
+        tailNode.next = head;
+        head = tailNode;
+        
     }
 
     public void q2_reverse() {

@@ -30,7 +30,7 @@ public class Lab04_650909 {
         MyTricklyLinkedList lis = new MyTricklyLinkedList();
         lis.insert(d);
         System.out.println("before -> " + lis);
-        lis.q1_rotate_clockwise(4);
+        lis.q1_rotate_counter_clockwise(4);
         System.out.println("(k= " + 4 + ") -> " + lis);
     //     lis.q1_rotate_clockwise(7);
     //     System.out.println("(k= " + 7 + ") -> " + lis);
