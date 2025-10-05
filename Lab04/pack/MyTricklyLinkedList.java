@@ -40,14 +40,70 @@ public class MyTricklyLinkedList extends MyLinkedList {
     }
 
     public void q3_remove_dup() {
+        if (head == null) { return; }
 
+        Node current = head;
+        while (current != null) {
+            Node runner = current;
+            while (runner.next != null) {
+                if (runner.next.data == current.data) {
+                    runner.next = runner.next.next;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            current = current.next;
+        }
     }
 
     public void q4_increment_digits() {
+        if (head == null) { return; }
 
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            if (current.data < 9) {
+                current.data += 1;
+            } else {
+                current.data = 0;
+                count++;
+            }
+            current = current.next;
+        }
+        if (count == size()) {
+            Node newNode = new Node(1);
+            newNode.next = head;
+            head = newNode;
+        }
     }
 
     public boolean q5_isPalindrome() {
-        return false;
+        if (head == null || head.next == null) { return false; }
+
+        Node front = head;
+        Node half = head;
+        int len = size();
+
+        for (int i = 0; i < len/2; i++) {
+            half = half.next;
+        }
+        if (len % 2 != 0) {
+            half = half.next;
+        }
+
+        MyTricklyLinkedList back = new MyTricklyLinkedList();
+        while (half != null) {
+            back.add(half.data);
+            half = half.next;
+        }
+
+        while (front != null && back.head != null) {
+            if (front.data != back.head.data) {
+                return false;
+            }
+            front = front.next;
+            back.head = back.head.next;
+        }
+        return true;
     }
 }
