@@ -1,6 +1,6 @@
 package pack;
 
-public class MyLinkedList {
+public class MyLinkedList_650909 {
     class Node {
         protected int data;
         protected Node next;

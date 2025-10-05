@@ -1,6 +1,6 @@
 package pack;
 
-public class MyTricklyLinkedList extends MyLinkedList {
+public class MyTricklyLinkedList extends MyLinkedList_650909 {
     public void q1_rotate_counter_clockwise(int k) {
         if (head == null || k == 0) {
             return;

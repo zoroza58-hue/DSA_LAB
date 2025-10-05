@@ -1,13 +1,13 @@
 // package Lab04;
 
-import pack.MyLinkedList;
+import pack.MyLinkedList_650909;
 import pack.MyTricklyLinkedList;
 
 public class Lab04_650909 {
 
     static void demo_1() {
         System.out.println("demo1");
-        MyLinkedList lis = new MyLinkedList();
+        MyLinkedList_650909 lis = new MyLinkedList_650909();
         lis.add(5);
         lis.add(1);
         lis.insert(4);
@@ -18,7 +18,7 @@ public class Lab04_650909 {
         System.out.println(lis);
     }
     static void demo_2() {
-        MyLinkedList lis = new MyLinkedList();
+        MyLinkedList_650909 lis = new MyLinkedList_650909();
         lis.add(new int[] {1,4,5,3});
         System.out.println(lis + " size= " + lis.size());
         lis.delete(3);
